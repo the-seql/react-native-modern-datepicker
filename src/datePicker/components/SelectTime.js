@@ -161,7 +161,7 @@ const SelectTime = () => {
           )
         : '',
     });
-    onTimeChange(utils.getFormated(newTime, 'timeFormat'));
+    onTimeChange(utils.getFormated(newTime, 'timeFormat') + amPm);
     mode !== 'time' &&
       setMainState({
         type: 'toggleTime',
