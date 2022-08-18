@@ -161,7 +161,7 @@ const SelectTime = () => {
           )
         : '',
     });
-    onTimeChange(utils.getFormated(newTime, 'timeFormat') + amPm);
+    onTimeChange(utils.getFormated(newTime, 'timeFormat') + " " + amPm);
     mode !== 'time' &&
       setMainState({
         type: 'toggleTime',
@@ -191,14 +191,14 @@ const SelectTime = () => {
         onChange={hour => setTime({...time, hour})}
       />
       <TimeScroller
-        title={utils.config.hour}
-        data={['am', 'pm']}
-        onChange={ampm => setAmPm(ampm)}
-      />
-      <TimeScroller
         title={utils.config.minute}
         data={Array.from({length: 60 / minuteInterval}, (x, i) => i * minuteInterval)}
         onChange={minute => setTime({...time, minute})}
+      />
+      <TimeScroller
+        title={utils.config.hour}
+        data={['am', 'pm']}
+        onChange={ampm => setAmPm(ampm)}
       />
       <View style={style.footer}>
         <TouchableOpacity style={style.button} activeOpacity={0.8} onPress={selectTime}>
