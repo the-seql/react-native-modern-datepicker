@@ -121,18 +121,18 @@ const SelectTime = () => {
   const [show, setShow] = useState(false);
   const [time, setTime] = useState({
     minute: 0,
-    hour: 0,
+    hour: 12,
   });
   const style = styles(options);
   const openAnimation = useRef(new Animated.Value(0)).current;
 
-  useEffect(() => {
-    show &&
-      setTime({
-        minute: 0,
-        hour: 0,
-      });
-  }, [show]);
+  // useEffect(() => {
+  //   show &&
+  //     setTime({
+  //       minute: 0,
+  //       hour: 0,
+  //     });
+  // }, [show]);
 
   useEffect(() => {
     mainState.timeOpen && setShow(true);
