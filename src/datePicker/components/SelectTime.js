@@ -117,7 +117,7 @@ const TimeScroller = ({title, data, onChange}) => {
 const SelectTime = () => {
   const {options, state, utils, minuteInterval, mode, onTimeChange} = useCalendar();
   const [mainState, setMainState] = state;
-  const [amPm, setAmPm] = useState("am");
+  const [amPm, setAmPm] = useState("AM");
   const [show, setShow] = useState(false);
   const [time, setTime] = useState({
     minute: 0,
@@ -200,7 +200,7 @@ const SelectTime = () => {
       />
       <TimeScroller
         title={utils.config.hour}
-        data={['am', 'pm']}
+        data={['AM', 'PM']}
         onChange={ampm => setAmPm(ampm)}
       />
       <View style={style.footer}>
