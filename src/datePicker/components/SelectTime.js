@@ -188,7 +188,10 @@ const SelectTime = () => {
       <TimeScroller
         title={utils.config.hour}
         data={[12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]}
-        onChange={hour => setTime({...time, hour})}
+        onChange={hour => {
+          console.log("set hour", hour);
+          setTime({...time, hour});
+        }}
       />
       <TimeScroller
         title={utils.config.minute}
