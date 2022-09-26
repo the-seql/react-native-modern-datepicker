@@ -38,7 +38,6 @@ const TimeScroller = ({title, data, onChange}) => {
   };
 
   const renderItem = ({item, index}) => {
-    console.log("renderItem", item, index);
     const makeAnimated = (a, b, c) => {
       return {
         inputRange: [...data.map((_, i) => i * itemSize)],
@@ -80,6 +79,10 @@ const TimeScroller = ({title, data, onChange}) => {
       </Animated.View>
     );
   };
+
+  // useEffect(() => {
+  //   console.log("data", I18nManager.isRTL, data);
+  // }, [data]);
 
   return (
     <View style={style.row} onLayout={changeItemWidth}>
