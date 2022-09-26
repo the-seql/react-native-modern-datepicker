@@ -38,6 +38,7 @@ const TimeScroller = ({title, data, onChange}) => {
   };
 
   const renderItem = ({item, index}) => {
+    console.log("renderItem", item, index);
     const makeAnimated = (a, b, c) => {
       return {
         inputRange: [...data.map((_, i) => i * itemSize)],
