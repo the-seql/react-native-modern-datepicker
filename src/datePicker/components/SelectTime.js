@@ -121,7 +121,7 @@ const TimeScroller = ({title, data, onChange}) => {
 const SelectTime = () => {
   const {options, state, utils, minuteInterval, mode, onTimeChange} = useCalendar();
   const [mainState, setMainState] = state;
-  const [amPm, setAmPm] = useState("AM");
+  const [amPm, setAmPm] = useState("PM");
   const [show, setShow] = useState(false);
   const [time, setTime] = useState({
     minute: 0,
